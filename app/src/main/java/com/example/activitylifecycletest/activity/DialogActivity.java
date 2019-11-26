@@ -1,13 +1,16 @@
-package com.example.activitylifecycletest;
+package com.example.activitylifecycletest.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.activitylifecycletest.R;
+import com.example.activitylifecycletest.base.BaseActivity;
+
 /**
  * Create By JK_Liu on 2019/11/25
  */
-public class DialogActivity extends AppCompatActivity {
+public class DialogActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

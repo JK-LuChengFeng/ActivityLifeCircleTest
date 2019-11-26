@@ -1,4 +1,4 @@
-package com.example.activitylifecycletest;
+package com.example.activitylifecycletest.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.activitylifecycletest.R;
+import com.example.activitylifecycletest.base.BaseActivity;
+
 /**
  * Create By JK_Liu on ${DATE}
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
     private Button btn_normal, btn_dialog;
@@ -74,8 +77,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.btn_normal:
-                intent.setClass(MainActivity.this,NormalActivity.class);
-                startActivity(intent);
+//                intent.setClass(MainActivity.this,NormalActivity.class);
+//                startActivity(intent);
+
+                NormalActivity.actionStart(MainActivity.this,"str1","str2");
+
                 break;
             case R.id.btn_dialog:
                 intent.setClass(MainActivity.this,DialogActivity.class);
